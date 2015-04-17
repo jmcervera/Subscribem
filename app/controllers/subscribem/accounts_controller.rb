@@ -5,6 +5,7 @@ module Subscribem
 
   	def new
   		@account = Account.new
+  		@account.build_owner
   	end
 
   	def create

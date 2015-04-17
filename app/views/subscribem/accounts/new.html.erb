@@ -4,5 +4,19 @@
 		<%= account.label :name, "Name" %> <br>
 		<%= account.text_field :name %>
 	</p>
+	<%= account.fields_for :owner do |owner| %>
+		<p>
+			<%= owner.label :email, "Email" %> <br>
+			<%= owner.text_field :email %>
+		</p>
+		<p>
+			<%= owner.label :password, "Passwword" %> <br>
+			<%= owner.text_field :password %>
+		</p>
+		<p>
+			<%= owner.label :password_confirmation, "Passsword" %> <br>
+			<%= owner.text_field :password_confirmation %>
+		</p>
+	<% end %>
 	<%= account.submit %>
 <% end %>
